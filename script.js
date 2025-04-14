@@ -56,4 +56,16 @@ document.addEventListener(`DOMContentLoaded`, function () {
     cardBox[2].style.opacity = thirdOpacityData;
     cardBox[2].style.transform = `scale(${thirdScaleData})`;
   });
+
+  const mainMenu = document.querySelector(`#hamburger`);
+  const inMenu = document.querySelector(`.in_menu`);
+
+  mainMenu.addEventListener(`click`, function () {
+    const hasClass = this.classList.contains(`active`);
+    if (hasClass) {
+      inMenu.classList.add(`active`);
+    } else {
+      inMenu.classList.remove(`active`);
+    }
+  });
 });
