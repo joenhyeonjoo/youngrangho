@@ -6,18 +6,20 @@ document.addEventListener(`DOMContentLoaded`, function () {
   submenuTab.forEach((li) => {
     li.addEventListener(`mouseenter`, () => {
       submenuBox.classList.add(`active`);
+
       subMenus.forEach((tab) => tab.classList.remove(`active`));
 
       const target = li.dataset.tab;
       const changeTab = document.getElementById(target);
       changeTab.classList.add(`active`);
     });
-
-    submenuBox.addEventListener(`mouseleave`, function () {
-      this.classList.remove(`active`);
-    });
   });
 
+  submenuBox.addEventListener(`mouseleave`, function () {
+    this.classList.remove(`active`);
+  });
+
+  //-----------------------------------------------------------------
   window.addEventListener(`scroll`, () => {
     const scrollHight = window.scrollY;
     const cardBox = document.querySelectorAll(`.sec_3 .list `);
@@ -61,6 +63,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
   const inMenu = document.querySelector(`.in_menu`);
 
   mainMenu.addEventListener(`click`, function () {
+    this.classList.toggle(`active`);
+
     const hasClass = this.classList.contains(`active`);
     if (hasClass) {
       inMenu.classList.add(`active`);
