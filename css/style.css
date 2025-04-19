@@ -764,6 +764,8 @@
   .sec_1 .in_box1 {
     flex-direction: column;
     gap: 10px;
+    margin: 0;
+    height: 600px;
   }
 
   .sec_1 .in_box2 {
@@ -783,6 +785,10 @@
     margin-top: 0;
   }
 
+  .sec_3 .list {
+    margin-top: 0;
+  }
+
   .sec_4 {
     display: flex;
     gap: 20px;
@@ -794,10 +800,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 10px;
   }
 
   .sec_4 .inbox1 .mainbox,
   .sec_4 .inbox2 .mainbox {
+    gap: 10px;
     width: 100%;
     pointer-events: none;
     height: 40%;
@@ -811,12 +819,17 @@
   .sec_4 .main_box .main_box_sub2 {
     opacity: 1;
   }
+
+  .footer_area {
+    margin-top: 20px;
+  }
 }
 
 /* ------------------------------------ */
 @media (max-width: 760px) {
   .container {
     margin: 0 30px;
+    padding-left: 0;
   }
 
   .header_area {
@@ -905,7 +918,8 @@
 /* ------------------------------------------------- */
 @media (max-width: 500px) {
   .container {
-    margin: 0 10px;
+    margin: 0;
+    padding: 0;
   }
 
   .header_area {
@@ -969,7 +983,7 @@
   }
 
   .footer_area .f_box {
-    padding-top: 25px;
+    padding: 20px 40px;
   }
 
   .footer_area .sns_list {
